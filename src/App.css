@@ -1,0 +1,266 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+.App{
+  background: #f1ededdb;
+
+}
+.navbar{
+  width: 100%;
+}
+
+.navbar_top_section{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(at center, rgb(191, 0, 191), #0e110e 130%);
+  border-bottom: 2px solid black ;
+}
+
+.serch{
+  width: 500px;
+  height: 46px;
+  margin: 30px ;
+  display: flex;
+  align-items: center;
+}
+.serch form{
+  border-radius: 10px;
+  background: #1c1b1b;
+  width: 260px;
+}
+.search_btn{
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.search_img{
+  width: 14px;
+  height: 14px;
+}
+
+input{
+  padding: 6px;
+  margin: 8px 10px;
+  align-items: center;
+  border-radius: 5px;
+  color: rgb(139,0, 139);
+  font-weight: 700;
+  outline: none;
+
+}
+
+.logo_section{
+  width: 30%;
+  margin: 35px;
+}
+.filter_side ul{
+  list-style: none;
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.filter_side  button{
+  width: 120px;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow:0  0 3px 3px rgb(139,0, 139) ;
+  border: 2px solid rgb(62, 2, 62);
+  font-weight: 600;
+  color: rgb(139,0, 139);
+}
+
+.container{
+  margin: 0 120px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container_item{
+  width: 29%;
+  margin: 20px auto;
+  padding: 5px;
+  box-shadow: 0 2px 15px 5px   rgb(70, 34, 70);
+  transition: .4s;
+  
+}
+
+.container_item:hover{
+  box-shadow: 0 2px 15px 5px   rgb(199, 1, 199);
+  border-radius: 2%;
+  ;
+}
+.container_item img{
+  width: 100%;
+}
+.container_item h3{
+  color: rgba(235, 0, 40, 1);
+  margin: 10px 0;
+  font-size: 13px;
+
+}
+.container_item h1{
+  margin: 10px 0;
+  font-size: 24px;
+
+}
+.veiw_section{
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.veiw_section span{
+  font-weight: 600;
+}
+.veiw_section h5{
+  font-weight: 400;
+  color: rgb(116, 129, 141);
+}
+p{
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(116, 129, 141);
+
+}
+
+
+.burger_menu{
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.burger_menu span{
+  position: relative;
+  height: 6px;
+  width: 40px;
+  border-radius: 4px;
+  background: #000;
+  transition: .6s;
+  margin: 2px;
+}
+
+
+/* Media-queres */
+
+
+
+@media screen and (max-width:1024px) and (min-width: 768px) {
+
+  .filter_side  button{
+    width: 80px;
+    height: 30px;
+  }
+  .container{
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  .container_item h1{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+  .navbar{
+    text-align: left;
+  }
+  .logo_section{
+    width: 30%;
+  }
+  .logo_section img{
+    max-width: 150px;
+  }
+  .serch {
+    display: none;
+  }
+  .filter_side{
+    position: absolute;
+    top: 70px;
+    left: -155px;
+    height: 100px;
+    transition: .6s;
+  }
+  .filter_side ul{
+    width: auto;
+    margin-top: .5px;
+    flex-direction: column;
+  }
+  .filter_side button{
+    width: 148px;
+    font-size: 10px;
+    height: 20px;
+    margin: 0;
+    border: none;
+    margin: 2px;
+    border-radius: 0;
+
+  }
+  .filter_side.active{
+    left: 0;
+  }
+  .filter_side.active >ul >li> button:hover{
+    background-color: #d3cccc;
+    font-size: 12px;
+  }
+  .burger_menu{
+    visibility: visible;
+    transform: translateX(0);
+    transition: .6s;
+  }
+  .container{
+    margin: 0 10px;
+    margin-top: 110px;
+  }
+  .container_item{
+    width: 48%;
+    margin: 20xp;
+  }
+  .span_visible{
+    transition: .6s;
+  }
+  
+  .span_visible span:nth-child(2){
+    transform: scale(0);
+  }
+
+
+  .span_visible span:nth-child(3){
+    transform: translateY(-10px) rotate(225deg) ;
+  }
+  .span_visible span:nth-child(1){
+    transform: translateY(10px) rotate(-225deg);
+  } 
+
+}
+
+@media screen and (max-width: 480px){
+ .container_item{
+  width: 90%;
+ }
+ .logo_section img{
+  max-width: 100px;
+ }
+}
